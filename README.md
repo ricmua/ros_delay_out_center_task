@@ -6,7 +6,7 @@ date: November 2022
 
 <!-- License
 
-Copyright 2022 Neuromechatronics Lab, Carnegie Mellon University (a.whit)
+Copyright 2022-2023 Neuromechatronics Lab, Carnegie Mellon University (a.whit)
 
 Contributors: 
   a. whit. (nml@whit.contact)
@@ -16,12 +16,16 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
 
-A ROS2 package to interface with a state machine and model for a cursor-based center-out, out-center behavioral task, with a delay period after the initial hold.
+A ROS2 package to interface with a state machine and model for a cursor-based 
+center-out, out-center behavioral task, with a delay period after the initial 
+hold.
 
 ## Installation
 
-This package can be added to any [ROS2 workspace]. ROS2 workspaces are built using [colcon]. See the [installation documentation](doc/markdown/installation.md) 
-for further information.
+This package can be added to any [ROS2 workspace]. ROS2 workspaces are built 
+using [colcon]. See the 
+[installation documentation](doc/markdown/installation.md) for further 
+information.
 
 ### Testing
 
@@ -58,4 +62,9 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 [Neuromechatronics Lab]: https://www.meche.engineering.cmu.edu/faculty/neuromechatronics-lab.html
 
 [pip install]: https://pip.pypa.io/en/stable/cli/pip_install/
+
+[ROS2 workspace]: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html
+
+[colcon]: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html
+
 

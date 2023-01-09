@@ -19,7 +19,8 @@ git clone https://github.com/ricmua/ros_delay_out_center_task.git path/to/worksp
 ```
 
 The [delay_out_center_task] project is a [submodule] of this package 
-repository, and it therefore must be updated after cloning.
+repository, and it therefore must be updated after cloning, if the 
+`--recurse-submodules` flag isn't added to the `clone` command.
 
 ```bash
 cd path/to/workspace/src/ros_delay_out_center_task

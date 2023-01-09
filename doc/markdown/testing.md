@@ -20,6 +20,8 @@ tests. Testing can be initiated via `colcon`.
 
 ```bash
 cd path/to/workspace
+source path/to/ros/setup.bash
+source install/local_setup.bash
 colcon test
 ```
 
