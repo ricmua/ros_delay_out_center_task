@@ -16,10 +16,9 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
 
-A [ROS2 package] for interfacing with the [delay_out_center_task] Python 
-package, which itself provides a state machine and model for the 
-"delay-out-center" behavioral task. This package implements an interface 
-between the behavioral task and the [ROS2 graph], in order to facilitate 
+A [ROS2 package] for interfacing with the "delay-out-center" behavioral task, 
+as implemented in the [delay_out_center_task] Python package. This package 
+links the behavioral task to the [ROS2 graph], in order to facilitate 
 interaction with other ROS2 packages. For example, this might be useful for 
 routing task-related manipulations of the environment to a GUI managed by a 
 remote [ROS2 node] -- such as the GUI provided by the [ros_tkinter_spheres_environment_gui] package.
