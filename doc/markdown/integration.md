@@ -43,10 +43,10 @@ for
 
 In addition to the primary functionality, [integration tests] are useful for 
 illustrating the interaction between the various dependent packages. The 
-[test_integration.py](test/test_integration.py) document -- along with the 
-associated test fixtures in [fixtures.py](test/fixtures.py) -- should be 
-especially informative. See the 
-[testing documentation](doc/markdown/testing.md) for further information.
+[test_integration.py](../../test/test_integration.py) document -- along with 
+the associated test fixtures in [fixtures.py](../../test/fixtures.py) -- should 
+be especially informative. See the 
+[testing documentation](testing.md) for further information.
 
 <!---------------------------------------------------------------------
    References

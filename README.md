@@ -16,11 +16,17 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
 
-A ROS2 package to interface with a state machine and model for a cursor-based 
-center-out, out-center behavioral task, with a delay period after the initial 
-hold. This package primarily consists of code and infrastructure for 
-[integrating](doc/markdown/integration.md) several other distinct Python and 
-ROS2 pacakges.
+A [ROS2 package] for interfacing with the [delay_out_center_task] package, 
+which itself provides a state machine and model for a specific behavioral task. 
+This package implements an interface between the behavioral task and the 
+[ROS2 graph], in order to facilitate interaction with other ROS2 packages 
+(e.g., a GUI, like the one provided by the 
+[ros_tkinter_spheres_environment_gui] package).
+
+This package primarily consists of code and infrastructure for several other 
+distinct Python and ROS2 packages. See the 
+[integration documentation](doc/markdown/integration.md) for further 
+information about these component packages.
 
 ## Installation
 
@@ -75,4 +81,8 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 [ros_transitions]: https://github.com/ricmua/ros_transitions
 [ros_parameter_collections]: https://github.com/ricmua/ros_parameter_collections
 [ros_threading_timer]: https://github.com/ricmua/ros_threading_timer
+
+[ROS2 package]: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html#what-is-a-ros-2-package
+
+[ros_tkinter_spheres_environment_gui]: https://github.com/ricmua/ros_tkinter_spheres_environment_gui
 
