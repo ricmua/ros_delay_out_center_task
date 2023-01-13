@@ -6,7 +6,8 @@ setup(
     name=package_name,
     version='0.0.1',
     packages=[package_name, 'delay_out_center_task'],
-    package_dir={'delay_out_center_task': 'delay_out_center_task/delay_out_center_task'},
+    package_dir={'delay_out_center_task': 
+                 'delay_out_center_task/delay_out_center_task'},
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -18,11 +19,11 @@ setup(
     maintainer_email='nml@whit.contact',
     description='TODO: Package description',
     license='Mozilla Public License 2.0',
-    requires=['delay_out_center_task'],
+    requires=['delay_out_center_task', 'ros_transitions'],
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'node = ros_delay_out_center_task.node:main'
+            'node = ros_delay_out_center_task.entry_point:main'
         ],
     },
 )

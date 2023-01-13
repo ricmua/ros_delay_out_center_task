@@ -18,7 +18,9 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 A ROS2 package to interface with a state machine and model for a cursor-based 
 center-out, out-center behavioral task, with a delay period after the initial 
-hold.
+hold. This package primarily consists of code and infrastructure for 
+[integrating](doc/markdown/integration.md) several other distinct Python and 
+ROS2 pacakges.
 
 ## Installation
 
@@ -30,11 +32,12 @@ information.
 ### Testing
 
 See the [testing documentation](doc/markdown/testing.md) for further 
-information.
+information. Also see notes about [integration](doc/markdown/integration.md) 
+testing.
 
 ## License
 
-Copyright 2022 [Neuromechatronics Lab], Carnegie Mellon University
+Copyright 2022-2023 [Neuromechatronics Lab], Carnegie Mellon University
 
 Contributors: 
 * a. whit. (nml@whit.contact)
@@ -67,4 +70,9 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 [colcon]: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html
 
+[delay_out_center_task]: https://github.com/ricmua/delay_out_center_task
+[ros_spheres_environment]: https://github.com/ricmua/ros_spheres_environment
+[ros_transitions]: https://github.com/ricmua/ros_transitions
+[ros_parameter_collections]: https://github.com/ricmua/ros_parameter_collections
+[ros_threading_timer]: https://github.com/ricmua/ros_threading_timer
 

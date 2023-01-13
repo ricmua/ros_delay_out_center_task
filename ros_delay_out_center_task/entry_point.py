@@ -1,8 +1,6 @@
-""" A ROS2 application that starts a state machine and model for a cursor-based 
-    center-out, out-center behavioral task, with a delay period after the 
-    initial hold. """
+""" Entry point for a ROS2, node-based application. """
 
-# Copyright 2022 Carnegie Mellon University Neuromechatronics Lab (a.whit)
+# Copyright 2022-2023 Carnegie Mellon University Neuromechatronics Lab (a.whit)
 # 
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this

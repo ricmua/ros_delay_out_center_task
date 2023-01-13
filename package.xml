@@ -9,6 +9,9 @@
 
   <depend>ros_transitions</depend>
   <depend>delay_out_center_task</depend>
+  <depend>ros_threading_timer</depend>
+  <depend>ros_parameter_collections</depend>
+  <depend>ros_spheres_environment</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
