@@ -16,15 +16,16 @@ License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at https://mozilla.org/MPL/2.0/.
 -->
 
-A [ROS2 package] for interfacing with the [delay_out_center_task] package, 
-which itself provides a state machine and model for a specific behavioral task. 
-This package implements an interface between the behavioral task and the 
-[ROS2 graph], in order to facilitate interaction with other ROS2 packages 
-(e.g., a GUI, like the one provided by the 
-[ros_tkinter_spheres_environment_gui] package).
+A [ROS2 package] for interfacing with the [delay_out_center_task] Python 
+package, which itself provides a state machine and model for the 
+"delay-out-center" behavioral task. This package implements an interface 
+between the behavioral task and the [ROS2 graph], in order to facilitate 
+interaction with other ROS2 packages. For example, this might be useful for 
+routing task-related manipulations of the environment to a GUI managed by a 
+remote [ROS2 node] -- such as the GUI provided by the [ros_tkinter_spheres_environment_gui] package.
 
-This package primarily consists of code and infrastructure for several other 
-distinct Python and ROS2 packages. See the 
+This package primarily consists of code and infrastructure for integrating 
+several other distinct Python and ROS2 packages. See the 
 [integration documentation](doc/markdown/integration.md) for further 
 information about these component packages.
 
@@ -85,4 +86,8 @@ file, You can obtain one at https://mozilla.org/MPL/2.0/.
 [ROS2 package]: https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html#what-is-a-ros-2-package
 
 [ros_tkinter_spheres_environment_gui]: https://github.com/ricmua/ros_tkinter_spheres_environment_gui
+
+[ROS2 graph]: https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html#background
+
+[ROS2 node]: https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html#background
 
