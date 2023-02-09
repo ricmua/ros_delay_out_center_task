@@ -301,6 +301,8 @@ def test_success_trial_sequence(node, machine, client_node, environment_server):
     model.start_block()
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    assert len(client_node.events) == 1
+    assert len(client_node.states) == 1
     assert client_node.events[-1] == 'start_block'
     assert client_node.states[-1] == 'intertrial'
     
@@ -308,6 +310,8 @@ def test_success_trial_sequence(node, machine, client_node, environment_server):
     executor.spin_until_future_complete(timer._future)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    assert len(client_node.events) == 2
+    assert len(client_node.states) == 2
     assert client_node.events[-1] == 'to_move_a'
     assert client_node.states[-1] == 'move_a'
     elapsed_s = timer._elapsed_ns / 1e9
@@ -319,6 +323,8 @@ def test_success_trial_sequence(node, machine, client_node, environment_server):
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    assert len(client_node.events) == 3
+    assert len(client_node.states) == 3
     assert client_node.events[-1] == 'target_engaged'
     assert client_node.states[-1] == 'hold_a'
     
@@ -326,6 +332,8 @@ def test_success_trial_sequence(node, machine, client_node, environment_server):
     executor.spin_until_future_complete(timer._future)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    assert len(client_node.events) == 4
+    assert len(client_node.states) == 4
     assert client_node.events[-1] == 'timeout'
     assert client_node.states[-1] == 'delay_a'
     elapsed_s = timer._elapsed_ns / 1e9
