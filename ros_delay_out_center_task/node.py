@@ -83,7 +83,9 @@ class Node(ros_transitions.Node):
         
         # Initialize the pytransitions state machine.
         self.environment = Environment(node=self) #Environment()
-        self.model = Model(environment=self.environment, parameters=parameters)
+        self.model = Model(environment=self.environment, 
+                           parameters=parameters,
+                           log=self.log)
         self.machine = Machine(model=self.model)
         
         ## Create a cursor.
