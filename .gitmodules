@@ -1,3 +1,3 @@
 [submodule "delay_out_center_task"]
 	path = delay_out_center_task
-	url = nml_github:ricmua/delay_out_center_task.git
+	url = https://github.com/ricmua/delay_out_center_task.git

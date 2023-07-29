@@ -80,7 +80,7 @@ def test_model_baseline(model):
     
     # Assert the baseline state.
     assert model.target_index == None
-    assert isinstance(model.targets, list)
+    assert isinstance(model.targets, dict)
     assert len(model.targets) > 0
     
   
