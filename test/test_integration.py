@@ -350,14 +350,24 @@ def test_success_trial_sequence(node, machine, client_node, environment_server):
     assert client_node.events[-1] == 'target_engaged'
     assert client_node.states[-1] == 'hold_b'
     
-    # Wait for hold_b timeout and transition to move_c.
+    # Wait for hold_b timeout and transition to delay_b.
+    executor.spin_until_future_complete(timer._future)
+    executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
+    assert client_node.events[-1] == 'timeout'
+    assert client_node.states[-1] == 'delay_b'
+    elapsed_s = timer._elapsed_ns / 1e9
+    expected_s = model.parameters['timeout_s.hold_b']
+    assert abs(expected_s - elapsed_s) < TIMEOUT_TOLERANCE_S
+    
+    # Wait for delay_b timeout and transition to move_c.
     executor.spin_until_future_complete(timer._future)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     executor.spin_once(timeout_sec=SPIN_TIMEOUT_SECONDS)
     assert client_node.events[-1] == 'timeout'
     assert client_node.states[-1] == 'move_c'
     elapsed_s = timer._elapsed_ns / 1e9
-    expected_s = model.parameters['timeout_s.hold_b']
+    expected_s = model.parameters['timeout_s.delay_b']
     assert abs(expected_s - elapsed_s) < TIMEOUT_TOLERANCE_S
     
     # Indicate that the cursor has moved to the target.
